@@ -13,7 +13,8 @@ export const accountSlice = createSlice({
             state.amount -= 1;
         },
         incrementByAmount: (state, action) => {
-            state.amount += action.payload;
+            state.amount += Number(action.payload);
+            // console.log("action", action.payload);
         },
     },
 });
